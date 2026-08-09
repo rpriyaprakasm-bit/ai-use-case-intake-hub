@@ -19,7 +19,7 @@ Trigger: When an item is created (SharePoint list: AI Use Case Intake)
 Trigger: Recurrence (weekly)
   → Get items where Stage in (Submitted, Triaged)
   → Create HTML table
-  → Post to Value Hub channel: "Triage queue this week" + link to list/dashboard
+  → Post to program channel: "Triage queue this week" + link to list/dashboard
 ```
 
 ## Flow C — Stage moved to Prioritized

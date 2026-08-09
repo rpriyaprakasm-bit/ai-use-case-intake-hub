@@ -6,6 +6,6 @@ UC-004,Store incident first-draft report,Retail Ops,Triaged,4,3,3,3,72,Copilot,I
 UC-005,IT access request chatbot,IT Service,Submitted,3,4,2,2,58,Copilot Studio,Internal,200,Deflect L1 FAQs,Licensing check,2026-08-06
 UC-006,Vendor contract clause extract,Procurement,Parked,4,4,2,4,52,AI + Documents,Confidential,6,Speed review of standard clauses,Restricted pattern TBD,2026-07-20
 UC-007,HR policy Q&A bot,HR,Declined,2,3,2,3,48,Copilot Studio,Confidential,500,Answer policy questions,Source of truth not approved,2026-07-15
-UC-008,SharePoint intake form for AI ideas,Value Hub,Deployed,3,1,5,1,88,Power Apps + List,Internal,15,Single backlog for all ideas,CoE pattern,2026-06-30
+UC-008,SharePoint intake form for AI ideas,Enablement Team,Deployed,3,1,5,1,88,Power Apps + List,Internal,15,Single backlog for all ideas,CoE pattern,2026-06-30
 UC-009,Daily sales anomaly highlight,Merchandising,Triaged,5,4,3,2,74,Power Automate + BI,Internal,25,Flag outliers before 9am,Data product dependency,2026-08-04
 UC-010,Expense receipt field extract,Finance,Submitted,3,3,3,3,65,AI Builder,Confidential,60,Less manual keying,Premium capacity,2026-08-07

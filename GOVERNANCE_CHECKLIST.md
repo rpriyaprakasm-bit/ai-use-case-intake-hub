@@ -32,7 +32,7 @@ Complete before **In Build → Deployed** for production use.
 ## Deployment
 
 - [ ] UAT with sponsor complete
-- [ ] Support path agreed (maker vs L1 vs Value Hub)
+- [ ] Support path agreed (maker vs L1 vs enablement team)
 - [ ] Rollback / disable plan known
 
-**Escalation:** blocked items → Value Hub lead + risk/technology partner within 5 business days.
+**Escalation:** blocked items → program lead + risk/technology partner within 5 business days.

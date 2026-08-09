@@ -11,13 +11,13 @@ Move **Submitted** items to Triaged / Prioritized / Parked / Declined with clear
 | 0–5 | Counts: new this week, aging &gt;14 days, blocked on governance |
 | 5–20 | Score top 5 new items (rubric) — decide stage |
 | 20–25 | Capacity: what can enter **In Build** this sprint |
-| 25–30 | Risks / escalations / CoP shout-outs |
+| 25–30 | Risks / escalations / community shout-outs |
 
 ## Roles
 
 | Role | Responsibility |
 |------|----------------|
-| Facilitator (Value Hub analyst) | Agenda, timer, update list live |
+| Facilitator (enablement analyst) | Agenda, timer, update list live |
 | Business sponsors | Clarify value and constraints |
 | Maker lead | Effort/readiness reality check |
 | Governance (as needed) | Restricted data / DLP calls |

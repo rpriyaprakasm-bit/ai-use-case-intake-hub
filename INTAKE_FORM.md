@@ -25,7 +25,7 @@ Use as a **Microsoft Form**, **SharePoint list**, or **Power Apps** canvas form.
 | Deadline / regulatory driver | Date/text | Optional pressure |
 | Links | URL | SOP, sample file, ticket |
 
-## Triage-only (filled by Value Hub)
+## Triage-only (filled by program team)
 
 | Field | Type |
 |-------|------|

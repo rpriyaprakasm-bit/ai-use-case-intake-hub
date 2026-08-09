@@ -2,7 +2,7 @@
 
 **Intake → triage → prioritize → track** for AI and citizen-led automation initiatives.
 
-Built as a portfolio pattern for **AI Value Hub / CoE-style** programs: structured backlog, transparent scoring, Power Automate-ready workflow, and a live pipeline dashboard.
+Portfolio pattern for **AI enablement and CoE-style** programs: structured backlog, transparent scoring, Power Automate-ready workflow, and a live pipeline dashboard.
 
 [![Dashboard](https://img.shields.io/badge/Live-Dashboard-38bdf8)](https://raw.githack.com/rpriyaprakasm-bit/ai-use-case-intake-hub/main/docs/dashboard.html)
 
@@ -10,7 +10,7 @@ Built as a portfolio pattern for **AI Value Hub / CoE-style** programs: structur
 
 ## Why this exists
 
-Value Hub teams need more than ideas in email. They need:
+Automation programs need more than ideas in email. They need:
 
 1. A **standard intake form** (business problem, data sensitivity, tools, sponsor)
 2. A **scoring rubric** (value, effort, readiness, risk)
@@ -25,7 +25,7 @@ This repo is a ready-to-adapt blueprint with sample data and docs.
 
 | Artifact | Purpose |
 |----------|--------|
-| [docs/dashboard.html](./docs/dashboard.html) | Pipeline dashboard (counts, RAG, top scored cases) |
+| [docs/dashboard.html](./docs/dashboard.html) | Pipeline dashboard (counts, stages, top scored cases) |
 | [data/backlog.csv](./data/backlog.csv) | Sample use-case backlog |
 | [data/backlog.json](./data/backlog.json) | Same data for the dashboard |
 | [RUBRIC.md](./RUBRIC.md) | Value / effort / readiness / risk scoring |
@@ -45,7 +45,7 @@ Submitted → Triaged → Prioritized → In Build → Deployed
 
 ---
 
-## Skills demonstrated (role map)
+## Skills demonstrated
 
 - Intake, triage, prioritization, backlog tracking  
 - AI / automation use-case lifecycle  
