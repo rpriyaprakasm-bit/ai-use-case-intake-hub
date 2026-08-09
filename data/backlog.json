@@ -1,0 +1,16 @@
+{
+  "updated": "2026-08-08",
+  "program": "AI Value Hub — Use Case Pipeline",
+  "items": [
+    {"id": "UC-001", "title": "Weekly ops status auto-pack", "sponsor": "P. Sharma", "stage": "Deployed", "value": 5, "effort": 2, "readiness": 5, "risk": 2, "priority_score": 92, "tool": "Power Automate", "data_sensitivity": "Internal", "users_impacted": 28, "outcome": "Cut Friday prep time 50%"},
+    {"id": "UC-002", "title": "Copilot meeting-notes to action log", "sponsor": "L. Nguyen", "stage": "In Build", "value": 4, "effort": 2, "readiness": 4, "risk": 2, "priority_score": 84, "tool": "Copilot + Automate", "data_sensitivity": "Internal", "users_impacted": 12, "outcome": "Actions in Planner within 1 hour"},
+    {"id": "UC-003", "title": "Invoice coding assist", "sponsor": "Finance Ops", "stage": "Prioritized", "value": 5, "effort": 3, "readiness": 3, "risk": 3, "priority_score": 78, "tool": "Copilot", "data_sensitivity": "Confidential", "users_impacted": 8, "outcome": "Reduce miscodes 20%"},
+    {"id": "UC-004", "title": "Store incident first-draft report", "sponsor": "Retail Ops", "stage": "Triaged", "value": 4, "effort": 3, "readiness": 3, "risk": 3, "priority_score": 72, "tool": "Copilot", "data_sensitivity": "Internal", "users_impacted": 40, "outcome": "Faster first draft for managers"},
+    {"id": "UC-005", "title": "IT access request chatbot", "sponsor": "IT Service", "stage": "Submitted", "value": 3, "effort": 4, "readiness": 2, "risk": 2, "priority_score": 58, "tool": "Copilot Studio", "data_sensitivity": "Internal", "users_impacted": 200, "outcome": "Deflect L1 FAQs"},
+    {"id": "UC-006", "title": "Vendor contract clause extract", "sponsor": "Procurement", "stage": "Parked", "value": 4, "effort": 4, "readiness": 2, "risk": 4, "priority_score": 52, "tool": "AI + Documents", "data_sensitivity": "Confidential", "users_impacted": 6, "outcome": "Speed review of standard clauses"},
+    {"id": "UC-007", "title": "HR policy Q&A bot", "sponsor": "HR", "stage": "Declined", "value": 2, "effort": 3, "readiness": 2, "risk": 3, "priority_score": 48, "tool": "Copilot Studio", "data_sensitivity": "Confidential", "users_impacted": 500, "outcome": "Answer policy questions"},
+    {"id": "UC-008", "title": "SharePoint intake form for AI ideas", "sponsor": "Value Hub", "stage": "Deployed", "value": 3, "effort": 1, "readiness": 5, "risk": 1, "priority_score": 88, "tool": "Power Apps + List", "data_sensitivity": "Internal", "users_impacted": 15, "outcome": "Single backlog for all ideas"},
+    {"id": "UC-009", "title": "Daily sales anomaly highlight", "sponsor": "Merchandising", "stage": "Triaged", "value": 5, "effort": 4, "readiness": 3, "risk": 2, "priority_score": 74, "tool": "Power Automate + BI", "data_sensitivity": "Internal", "users_impacted": 25, "outcome": "Flag outliers before 9am"},
+    {"id": "UC-010", "title": "Expense receipt field extract", "sponsor": "Finance", "stage": "Submitted", "value": 3, "effort": 3, "readiness": 3, "risk": 3, "priority_score": 65, "tool": "AI Builder", "data_sensitivity": "Confidential", "users_impacted": 60, "outcome": "Less manual keying"}
+  ]
+}

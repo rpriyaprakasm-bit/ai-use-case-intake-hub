@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AI Use-Case Intake Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:#0b0f19;color:#e2e8f0;padding:1.25rem}
+.wrap{max-width:1100px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}}
+.tile{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:14px;text-align:center}
+.tile .v{font-size:1.6rem;font-weight:700}.tile .l{font-size:.7rem;color:#94a3b8;margin-top:4px;text-transform:uppercase}
+table{width:100%;border-collapse:collapse;font-size:.82rem;background:#1e293b;border-radius:12px;overflow:hidden}
+th,td{padding:10px 12px;text-align:left;border-top:1px solid #334155}th{color:#94a3b8;font-weight:500;background:#0f172a}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.72rem;font-weight:600}
+.s-Deployed{background:#16a34a;color:#fff}.s-In{background:#2563eb;color:#fff}.s-Prioritized{background:#7c3aed;color:#fff}
+.s-Triaged{background:#ca8a04;color:#fff}.s-Submitted{background:#64748b;color:#fff}.s-Parked{background:#78716c;color:#fff}.s-Declined{background:#44403c;color:#fff}
+.bar{height:8px;background:#334155;border-radius:99px;overflow:hidden;margin-top:6px}.bar>i{display:block;height:100%;background:#38bdf8}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p style="margin:0;font-size:.7rem;color:#64748b;text-transform:uppercase;letter-spacing:.06em">AI Value Hub</p>
+  <h1 style="margin:4px 0 8px;color:#fff">Use-Case Intake Pipeline</h1>
+  <p style="color:#94a3b8;margin:0 0 8px">Sample backlog · score-driven triage · Power Automate-ready</p>
+  <div class="grid" id="kpis"></div>
+  <p style="font-size:.68rem;text-transform:uppercase;color:#94a3b8">Pipeline by stage</p>
+  <div id="stages" style="display:grid;gap:8px;margin-bottom:20px"></div>
+  <p style="font-size:.68rem;text-transform:uppercase;color:#94a3b8">Backlog</p>
+  <div style="overflow-x:auto">
+    <table><thead><tr><th>ID</th><th>Title</th><th>Stage</th><th>Score</th><th>Tool</th><th>Sensitivity</th><th>Sponsor</th></tr></thead><tbody id="rows"></tbody></table>
+  </div>
+  <p style="text-align:center;color:#64748b;font-size:.75rem;margin-top:24px">AI Use-Case Intake Hub · portfolio demo</p>
+</div>
+<script>
+const sample={updated:"2026-08-08",items:[
+{id:"UC-001",title:"Weekly ops status auto-pack",sponsor:"P. Sharma",stage:"Deployed",priority_score:92,tool:"Power Automate",data_sensitivity:"Internal"},
+{id:"UC-002",title:"Copilot meeting-notes to action log",sponsor:"L. Nguyen",stage:"In Build",priority_score:84,tool:"Copilot + Automate",data_sensitivity:"Internal"},
+{id:"UC-003",title:"Invoice coding assist",sponsor:"Finance Ops",stage:"Prioritized",priority_score:78,tool:"Copilot",data_sensitivity:"Confidential"},
+{id:"UC-004",title:"Store incident first-draft report",sponsor:"Retail Ops",stage:"Triaged",priority_score:72,tool:"Copilot",data_sensitivity:"Internal"},
+{id:"UC-005",title:"IT access request chatbot",sponsor:"IT Service",stage:"Submitted",priority_score:58,tool:"Copilot Studio",data_sensitivity:"Internal"},
+{id:"UC-006",title:"Vendor contract clause extract",sponsor:"Procurement",stage:"Parked",priority_score:52,tool:"AI + Documents",data_sensitivity:"Confidential"},
+{id:"UC-007",title:"HR policy Q&A bot",sponsor:"HR",stage:"Declined",priority_score:48,tool:"Copilot Studio",data_sensitivity:"Confidential"},
+{id:"UC-008",title:"SharePoint intake form for AI ideas",sponsor:"Value Hub",stage:"Deployed",priority_score:88,tool:"Power Apps + List",data_sensitivity:"Internal"},
+{id:"UC-009",title:"Daily sales anomaly highlight",sponsor:"Merchandising",stage:"Triaged",priority_score:74,tool:"Power Automate + BI",data_sensitivity:"Internal"},
+{id:"UC-010",title:"Expense receipt field extract",sponsor:"Finance",stage:"Submitted",priority_score:65,tool:"AI Builder",data_sensitivity:"Confidential"}
+]};
+function badge(stage){const k=stage.startsWith("In ")?"In":stage;return `<span class="badge s-${k}">${stage}</span>`}
+function render(data){
+  const items=data.items||[];
+  const count=s=>items.filter(i=>i.stage===s).length;
+  const active=items.filter(i=>!["Deployed","Declined","Parked"].includes(i.stage)).length;
+  document.getElementById("kpis").innerHTML=`
+    <div class="tile"><div class="v">${items.length}</div><div class="l">Total cases</div></div>
+    <div class="tile"><div class="v" style="color:#38bdf8">${active}</div><div class="l">Active pipeline</div></div>
+    <div class="tile"><div class="v" style="color:#34d399">${count("Deployed")}</div><div class="l">Deployed</div></div>
+    <div class="tile"><div class="v" style="color:#fbbf24">${count("Submitted")+count("Triaged")}</div><div class="l">Awaiting triage</div></div>`;
+  const stages=["Submitted","Triaged","Prioritized","In Build","Deployed","Parked","Declined"];
+  const max=Math.max(...stages.map(count),1);
+  document.getElementById("stages").innerHTML=stages.map(s=>`
+    <div style="display:grid;grid-template-columns:120px 1fr 40px;gap:8px;align-items:center;font-size:.85rem">
+      <span style="color:#94a3b8">${s}</span>
+      <div class="bar"><i style="width:${Math.round(count(s)/max*100)}%"></i></div>
+      <span>${count(s)}</span>
+    </div>`).join("");
+  const sorted=[...items].sort((a,b)=>b.priority_score-a.priority_score);
+  document.getElementById("rows").innerHTML=sorted.map(i=>`
+    <tr>
+      <td style="color:#64748b">${i.id}</td>
+      <td style="color:#fff;font-weight:500">${i.title}</td>
+      <td>${badge(i.stage)}</td>
+      <td style="font-weight:600;color:#38bdf8">${i.priority_score}</td>
+      <td style="color:#94a3b8">${i.tool}</td>
+      <td style="color:#94a3b8">${i.data_sensitivity}</td>
+      <td style="color:#94a3b8">${i.sponsor}</td>
+    </tr>`).join("");
+}
+render(sample);
+fetch("../data/backlog.json").then(r=>r.ok?r.json():null).then(d=>{if(d&&d.items)render(d)}).catch(()=>{});
+</script>
+</body>
+</html>
