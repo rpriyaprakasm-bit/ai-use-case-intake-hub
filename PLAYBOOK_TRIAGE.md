@@ -1,35 +1,27 @@
-# Weekly triage playbook (30 minutes)
+# Weekly triage (about 30 minutes)
 
-## Purpose
+If triage runs over 45 minutes, the backlog is too big or we’re debating build details in the wrong room.
 
-Move **Submitted** items to Triaged / Prioritized / Parked / Declined with clear owners.
+## Order that works for me
 
-## Agenda
+1. **Numbers first** — how many new, how many stuck over two weeks.  
+2. **Only the top few new items** — score them live.  
+3. **Capacity check** — what can actually start, not what we wish we could start.  
+4. **Blockers** — data, license, or security holds.  
 
-| Min | Topic |
-|-----|--------|
-| 0–5 | Counts: new this week, aging &gt;14 days, blocked on governance |
-| 5–20 | Score top 5 new items (rubric) — decide stage |
-| 20–25 | Capacity: what can enter **In Build** this sprint |
-| 25–30 | Risks / escalations / community shout-outs |
+## Who should be there
 
-## Roles
+- Someone facilitating and updating the list  
+- Sponsor (or a delegate who can decide) for items on the agenda  
+- A maker who will say “that’s not two days of work”  
+- Security/platform only when sensitivity is unclear  
 
-| Role | Responsibility |
-|------|----------------|
-| Facilitator (enablement analyst) | Agenda, timer, update list live |
-| Business sponsors | Clarify value and constraints |
-| Maker lead | Effort/readiness reality check |
-| Governance (as needed) | Restricted data / DLP calls |
+## After the meeting
 
-## Output
+Stages and scores live on the list. If the only record is in chat, the next triage starts from zero.
 
-- Updated **Stage** and scores on each discussed item  
-- Owners for anything **Prioritized**  
-- Parking lot reasons written on the item (not only in chat)  
+## Things I stop
 
-## Anti-patterns
-
-- Scoring without a sponsor in the room for high-value claims  
-- “We’ll know it when we see it” with no outcome metric  
-- Starting build before data sensitivity is set  
+- Designing the solution in triage  
+- Scoring “AI because leadership said AI” with no process outcome  
+- Leaving Restricted data as “TBD” and still marking Prioritized  

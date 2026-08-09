@@ -1,33 +1,27 @@
-# Use-case scoring rubric
+# Scoring rubric
 
-Score each dimension **1–5**. Priority score = weighted total (max 100).
+Each dimension is 1–5. I write the number during triage, not before the meeting, so the sponsor can push back.
 
-| Dimension | Weight | 1 | 3 | 5 |
-|-----------|--------|---|---|---|
-| **Business value** | 30% | Local convenience | Team efficiency / quality | Enterprise or customer impact, measurable $ or hours |
-| **Effort** (invert) | 25% | Multi-team, 3+ months | 4–8 weeks, one maker + sponsor | Days–2 weeks, clear pattern exists |
-| **Readiness** | 25% | No data, no owner, unclear process | Sponsor named, data accessible with work | Process mapped, data classified, maker available |
-| **Risk / compliance** (invert) | 20% | Restricted data, no DLP path | Internal data, standard controls | Public/low sensitivity, approved connectors |
+| Dimension | Weight | Low (1) | Mid (3) | High (5) |
+|-----------|--------|---------|---------|----------|
+| **Business value** | 30% | Saves one person a few clicks | Helps a whole team weekly | Clear hours, cost, or customer impact |
+| **Effort** | 25% | Months, many teams | About a month | Days or a known pattern |
+| **Readiness** | 25% | No owner, fuzzy process | Sponsor + data with some work | Process clear, maker free, data known |
+| **Risk** | 20% | Restricted data, unclear controls | Internal data, normal controls | Low sensitivity, allowed connectors |
 
-### Formula
+Effort and risk are flipped in the math so lower effort/risk raises the score:
 
 ```text
 Priority = 30*(Value) + 25*(6-Effort) + 25*(Readiness) + 20*(6-Risk)
 ```
 
-Effort and Risk are inverted so *lower* effort/risk increases priority.
+### How I use the number
 
-### Decision bands
+| Band | What I usually do |
+|------|-------------------|
+| 80+ | Try to staff this cycle |
+| 60–79 | Real backlog — pull when capacity opens |
+| 40–59 | Park and write *why* on the item |
+| Below 40 | Decline or ask for a sharper problem statement |
 
-| Score | Guidance |
-|-------|----------|
-| **80–100** | Prioritize this cycle |
-| **60–79** | Backlog — schedule when capacity opens |
-| **40–59** | Park — needs sponsor, data, or pattern work |
-| **&lt;40** | Decline or rewrite problem statement |
-
-### Facilitator notes
-
-- Do not score “AI for AI’s sake.” Value must name a process outcome.  
-- Premium connectors / Copilot Studio / external APIs raise **Risk** and sometimes **Effort**.  
-- Duplicate of an existing pattern → boost Readiness, cut Effort.  
+I don’t re-score everything every week. Only new items and anything someone is arguing about.
